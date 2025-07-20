@@ -12,13 +12,23 @@ body{
     height: 100vh;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo{
     font-family: 'Pacifico';
 }
 
 .interface{
     max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 0 auto;
 }
 
 .flex{
@@ -72,6 +82,7 @@ header nav ul li{
 
 
 h2.titulo{
+    margin-bottom: 20px;
     color: white;
     font-size: 38px;
     text-align: center;
@@ -238,6 +249,10 @@ section.formulario{
     padding: 80px 4%;  /* 80 de largura e 4 cima e baixo */
 }
 
+.formulario .interface {
+    flex-direction: column;
+}
+
 form{
     max-width: 500px;
     margin: 0 auto;
@@ -308,8 +323,17 @@ footer .line-footer p a{
     text-decoration: none;
 }
 
-section.carouselExample{
-    width: 1px;
-    height: 1px;
+.carrosel {
+    width: 60vw;
+    height: 80vh;
+}
 
+.carouselExample {
+    width: 100%; 
+    height: 100%;
+}
+
+.carrosel img {
+    width: 100%;
+    height: 100%;
 }
