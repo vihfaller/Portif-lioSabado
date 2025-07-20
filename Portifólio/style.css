@@ -1,0 +1,315 @@
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.logo{
+    font-family: 'Pacifico';
+}
+
+.interface{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #7d7d7d;
+    text-decoration: none; /* tira o sublinhado das lçistas */
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.2);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+#btn-contato{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(192, 0, 192);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1.2;
+}
+
+
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(192, 0, 192);
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px rgb(192, 0, 192);
+    transform: scale(1.1);
+}
+
+
+/* ESTILO DO TOPO DO SITE */
+
+
+      
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /* linha de respiro */
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: rgb(192, 0, 192);
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    /* alternate: nao saia do 100 e pule pro 0, ira ir de 0 a 100 suave e depois de 100 a 0 suave*/
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    /* so vai funcionar se o elemento nao for position static */
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+#btn-contato2{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(192, 0, 192);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1.2;
+}
+
+#btn-contato2:hover{
+    box-shadow: 0px 0px 8px rgb(192, 0, 192);
+    transform: scale(1.1);
+}
+
+
+
+
+/* ESTILO DAS ESPECIALIDADES */
+
+section.especialidades {
+    padding: 40px 4%;
+}
+
+.especialidades .especialidades-box {
+    border: red 2px solid;
+    width: 100%;
+    color: white;
+    padding: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: .2s;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.475);
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: rgb(192, 0, 192);
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO SOBRE */
+
+section.sobre .img-sobre{
+    border: red solid 2px;
+}
+
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: rgb(192, 0, 192);
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(192, 0, 192);
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.6s;
+}
+
+section.formulario{
+    padding: 80px 4%;  /* 80 de largura e 4 cima e baixo */
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;  /* cancela o redirecionamento da minha textaree */
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: rgb(192, 0, 192);
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;     /* nossa linha sombreada */
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid rgb(192, 0, 192);
+}
+
+footer .line-footer p i{
+    color: rgb(192, 0, 192);
+    font-size: 22px;
+    padding-right: 10px;
+    
+}
+
+footer .line-footer p a{
+    color: #fff;
+    text-decoration: none;
+}
+
+section.carouselExample{
+    width: 1px;
+    height: 1px;
+
+}
